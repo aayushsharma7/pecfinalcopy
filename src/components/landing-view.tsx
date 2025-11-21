@@ -97,14 +97,14 @@ export function LandingView({ onStart, onLeaderboard, onMultiplayer, onProfile }
 
       {/* Hanging Lanterns - Top Left - Adjusted visibility and positioning for mobile */}
       <div className="absolute top-0 left-2 md:left-12 z-20 animate-swing origin-top group cursor-pointer hidden sm:block">
-        <div className="h-16 md:h-24 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
+        <div className="h-12 md:h-20 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
         <HangingLantern className="w-12 h-16 md:w-16 md:h-24 text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.6)] group-hover:drop-shadow-[0_0_25px_rgba(245,158,11,0.9)] transition-all duration-300 transform group-hover:scale-110" />
       </div>
       <div
         className="absolute top-0 left-16 md:left-40 z-20 animate-swing origin-top group cursor-pointer hidden md:block"
         style={{ animationDelay: "1s" }}
       >
-        <div className="h-12 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
+        <div className="h-8 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
         <HangingLantern className="w-12 h-16 text-amber-400 drop-shadow-[0_0_10px_rgba(245,158,11,0.6)] group-hover:drop-shadow-[0_0_20px_rgba(245,158,11,0.9)] transition-all duration-300 transform group-hover:scale-110" />
       </div>
 
@@ -113,23 +113,23 @@ export function LandingView({ onStart, onLeaderboard, onMultiplayer, onProfile }
         className="absolute top-0 right-2 md:right-12 z-20 animate-swing origin-top group cursor-pointer hidden sm:block"
         style={{ animationDelay: "0.5s" }}
       >
-        <div className="h-14 md:h-20 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
+        <div className="h-10 md:h-16 w-0.5 bg-amber-500/50 mx-auto group-hover:bg-amber-400 transition-colors"></div>
         <HangingLantern className="w-12 h-16 md:w-16 md:h-24 text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.6)] group-hover:drop-shadow-[0_0_25px_rgba(245,158,11,0.9)] transition-all duration-300 transform group-hover:scale-110" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen pt-20 pb-40 px-4 text-center">
+      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen pt-20 pb-60 px-4 text-center">
         <div
           className="space-y-2 animate-fade-in transition-transform duration-100 ease-out w-full max-w-4xl"
           style={{ transform: `translate(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px)` }}
         >
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-[#fbbf24] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] tracking-tight leading-none hover:scale-105 transition-transform duration-500 cursor-default">
-            VIZIER
-          </h1>
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-[#fbbf24] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] tracking-wide mb-8 hover:scale-105 transition-transform duration-500 cursor-default">
+          <h1 className="md:mt-12 font-serif text-7xl sm:text-6xl md:text-6xl lg:text-9xl font-bold text-[#fbbf24] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] tracking-tight leading-none hover:scale-105 transition-transform duration-500 cursor-default">
             ARABIAN
             <br />
             NIGHTS
+          </h1>
+          <h2 className="font-serif text-2xl sm:text-6xl md:text-5xl lg:text-7xl font-bold text-[#fbbf24] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] tracking-wide mb-8 hover:scale-105 transition-transform duration-500 cursor-default">
+            VIZIER
           </h2>
 
           <div className="mt-8 md:mt-12 max-w-lg mx-auto px-4">
@@ -168,7 +168,7 @@ export function LandingView({ onStart, onLeaderboard, onMultiplayer, onProfile }
 
       {/* Mosque Silhouettes - Bottom Left */}
       <div
-        className="absolute bottom-0 left-0 w-full md:w-1/2 h-[30vh] md:h-[40vh] z-10 pointer-events-none transition-transform duration-300 ease-out opacity-80 md:opacity-100"
+        className="absolute bottom-0 left-0 w-full md:w-1/2 h-[35vh] md:h-[50vh] z-10 pointer-events-none transition-transform duration-300 ease-out opacity-80 md:opacity-100"
         style={{ transform: `translate(${mousePos.x * 1.5}px, ${mousePos.y * 0.5}px)` }}
       >
         <MosqueLeft className="w-full h-full object-cover object-bottom text-[#ffb6c1] drop-shadow-[0_-5px_10px_rgba(0,0,0,0.3)]" />
@@ -176,14 +176,14 @@ export function LandingView({ onStart, onLeaderboard, onMultiplayer, onProfile }
 
       {/* Mosque Silhouettes - Bottom Right */}
       <div
-        className="absolute bottom-0 right-0 w-full md:w-1/2 h-[35vh] md:h-[50vh] z-10 pointer-events-none transition-transform duration-300 ease-out opacity-80 md:opacity-100"
+        className="absolute bottom-0 right-0 w-full md:w-1/2 h-[40vh] md:h-[60vh] z-10 pointer-events-none transition-transform duration-300 ease-out opacity-80 md:opacity-100"
         style={{ transform: `translate(${mousePos.x * -1.5}px, ${mousePos.y * 0.5}px)` }}
       >
         <MosqueRight className="w-full h-full object-cover object-bottom text-[#ffb6c1] drop-shadow-[0_-5px_10px_rgba(0,0,0,0.3)]" />
       </div>
 
       {/* Clouds */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#1a0b2e] via-[#1a0b2e]/80 to-transparent z-20 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-52 bg-gradient-to-t from-[#1a0b2e] via-[#1a0b2e]/80 to-transparent z-20 pointer-events-none"></div>
     </div>
   )
 }

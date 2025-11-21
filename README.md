@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arabian Nights Quiz App
+
+A magical Next.js quiz game themed around Arabian Nights. Features include:
+- **Rich UI** with gold gradient text, glass‑morphism navigation, and animated lanterns.
+- **SQLite** database powered by Prisma for persistent scores.
+- **Responsive design** with dark mode and custom fonts (Amiri, Cinzel, etc.).
+- **Leaderboard** with global and chapter tabs, animated entries, and a stylish back button.
+- **Deployable on Render** using a simple `npm start` script.
 
 ## Getting Started
-
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Generate Prisma client
+npx prisma generate
+
+# Run locally (development)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & Deploy (Render)
+```bash
+# Build for production
+npm run build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Start the server (Render will run this)
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Render service should have the environment variable:
+```
+DATABASE_URL=file:./prod.db
+```
+and a persistent disk mounted at `/var/data` for the SQLite file.
 
-## Learn More
+## Styling
+- **Gold text**: `.gold-text` class with a three‑tone gradient and glow.
+- **Glass navigation**: `.glass-nav` with blur and gold border.
+- **Custom fonts** loaded via Google Fonts and `next/font`.
+- **Animations**: floating lanterns, star twinkle, and slide‑in leaderboard rows.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
+- `dev` – runs the development server with hot‑reloading.
+- `build` – generates Prisma client, builds the Next.js app.
+- `postbuild` – pushes Prisma schema (`npx prisma db push`).
+- `start` – runs the compiled server using `tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT © 2025 Your Name
